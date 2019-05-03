@@ -39,7 +39,7 @@ sub_CR_1515 <- paste0("(Mean = ", m_CR_1515, ", SD = ", sd_CR_1515, ", N = ", N_
 p_CR_1515 <- ggplot(df_1515, aes(x=CR)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="violetred4", fill="violetred3") + 
 	labs(title="Total Correct for VSPLOT 15 (Original)",x="# Correct", y = "# of Participants", subtitle=sub_CR_1515) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_CR_2415 <- round(mean(df_2415$CR), digits=2)
 sd_CR_2415 <- round(sd(df_2415$CR), digits=2)
@@ -48,7 +48,7 @@ sub_CR_2415 <- paste0("(Mean = ", m_CR_2415, ", SD = ", sd_CR_2415, ", N = ", N_
 p_CR_2415 <- ggplot(df_2415, aes(x=CR)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="steelblue4", fill="steelblue3") + 
 	labs(title="Total Correct for VSPLOT 15 (Derived)",x="# Correct", y = "# of Participants", subtitle=sub_CR_2415) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_CR_2424 <- round(mean(df_2424$CR), digits=2)
 sd_CR_2424 <- round(sd(df_2424$CR), digits=2)
@@ -57,7 +57,7 @@ sub_CR_2424 <- paste0("(Mean = ", m_CR_2424, ", SD = ", sd_CR_2424, ", N = ", N_
 p_CR_2424 <- ggplot(df_2424, aes(x=CR)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=22, colour="darkseagreen4", fill="darkseagreen3") + 
 	labs(title="Total Correct for VSPLOT 24",x="# Correct", y = "# of Participants", subtitle=sub_CR_2424) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 # Plot total degrees off
 m_degoff_1515 <- round(mean(df_1515$SUM_DEG_OFF), digits=2)
@@ -67,7 +67,7 @@ sub_degoff_1515 <- paste0("(Mean = ", m_degoff_1515, ", SD = ", sd_degoff_1515, 
 p_degoff_1515 <- ggplot(df_1515, aes(x=SUM_DEG_OFF)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="violetred4", fill="violetred3") + 
 	labs(title="Degrees Off for VSPLOT 15 (Original)",x="Degrees Off", y = "# of Participants", subtitle=sub_degoff_1515) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_degoff_2415 <- round(mean(df_2415$SUM_DEG_OFF), digits=2)
 sd_degoff_2415 <- round(sd(df_2415$SUM_DEG_OFF), digits=2)
@@ -76,7 +76,7 @@ sub_degoff_2415 <- paste0("(Mean = ", m_degoff_2415, ", SD = ", sd_degoff_2415, 
 p_degoff_2415 <- ggplot(df_2415, aes(x=SUM_DEG_OFF)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="steelblue4", fill="steelblue3") + 
 	labs(title="Degrees Off for VSPLOT 15 (Derived)",x="Degrees Off", y = "# of Participants", subtitle=sub_degoff_2415) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_degoff_2424 <- round(mean(df_2424$SUM_DEG_OFF), digits=2)
 sd_degoff_2424 <- round(sd(df_2424$SUM_DEG_OFF), digits=2)
@@ -85,7 +85,7 @@ sub_degoff_2424 <- paste0("(Mean = ", m_degoff_2424, ", SD = ", sd_degoff_2424, 
 p_degoff_2424 <- ggplot(df_2424, aes(x=SUM_DEG_OFF)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=22, colour="darkseagreen4", fill="darkseagreen3") + 
 	labs(title="Degrees Off for VSPLOT 24",x="Degrees Off", y = "# of Participants", subtitle=sub_degoff_2424) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 # Plot speed
 m_medtime_1515 <- round(mean(df_1515[!(is.na(df_1515$MED_RESP_TIME)),"MED_RESP_TIME"]), digits=2)
@@ -94,34 +94,34 @@ N_medtime_1515 <- nrow(df_1515[!(is.na(df_1515$MED_RESP_TIME)),])
 sub_medtime_1515 <- paste0("(Mean = ", m_medtime_1515, ", SD = ", sd_medtime_1515, ", N = ", N_medtime_1515, ")")
 p_medtime_1515 <- ggplot(df_1515[!(is.na(df_1515$MED_RESP_TIME)),], aes(x=MED_RESP_TIME)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="violetred4", fill="violetred3") + 
-	labs(title="Median Resp. Time for VSPLOT 15 (Original)",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_1515) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	labs(title="Median Response Time for VSPLOT 15 (Original)",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_1515) +
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_medtime_2415 <- round(mean(df_2415[!(is.na(df_2415$MED_RESP_TIME)),"MED_RESP_TIME"]), digits=2)
 sd_medtime_2415 <- round(sd(df_2415[!(is.na(df_2415$MED_RESP_TIME)),"MED_RESP_TIME"]), digits=2)
 N_medtime_2415 <- nrow(df_2415[!(is.na(df_2415$MED_RESP_TIME)),])
 sub_medtime_2415 <- paste0("(Mean = ", m_medtime_2415, ", SD = ", sd_medtime_2415, ", N = ", N_medtime_2415, ")")
-p_medtime_2415 <- ggplot(df_2415[!(is.na(df_2415$MED_RESP_TIME)),], aes(x=MED_RESP_TIME)) + theme_minimal() +
+p_medtime_2415 <- ggplot(df_2415[!(is.na(df_2415$MED_RESP_TIME)),],, aes(x=MED_RESP_TIME)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=16, colour="steelblue4", fill="steelblue3") + 
-	labs(title="Median Resp. Time for VSPLOT 15 (Derived)",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_2415) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	labs(title="Median Response Time for VSPLOT 15 (Derived)",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_2415) +
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 m_medtime_2424 <- round(mean(df_2424[!(is.na(df_2424$MED_RESP_TIME)),"MED_RESP_TIME"]), digits=2)
 sd_medtime_2424 <- round(sd(df_2424[!(is.na(df_2424$MED_RESP_TIME)),"MED_RESP_TIME"]), digits=2)
 N_medtime_2424 <- nrow(df_2424[!(is.na(df_2424$MED_RESP_TIME)),])
 sub_medtime_2424 <- paste0("(Mean = ", m_medtime_2424, ", SD = ", sd_medtime_2424, ", N = ", N_medtime_2424, ")")
-p_medtime_2424 <- ggplot(df_2424[!(is.na(df_2424$MED_RESP_TIME)),], aes(x=MED_RESP_TIME)) + theme_minimal() +
+p_medtime_2424 <- ggplot(df_2424[!(is.na(df_2424$MED_RESP_TIME)),],, aes(x=MED_RESP_TIME)) + theme_minimal() +
 	geom_histogram(position="identity", alpha=0.5, bins=22, colour="darkseagreen4", fill="darkseagreen3") + 
-	labs(title="Median Resp. Time for VSPLOT 24",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_2424) +
-	theme(plot.title = element_text(size=15), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
+	labs(title="Median Response Time Off for VSPLOT 24",x="Median Response Time (ms)", y = "# of Participants", subtitle=sub_medtime_2424) +
+	theme(plot.title = element_text(size=18), axis.text=element_text(size=12),axis.title=element_text(size=14,face="bold"))
 
 
 
 # Return pdf
-pdf("/home/butellyn/plot_validation/plots/distributions_CRdegoffmedtime.pdf", width=18, height=5)
-grid.arrange(p_CR_1515, p_CR_2415, p_CR_2424, ncol=3)
-grid.arrange(p_degoff_1515, p_degoff_2415, p_degoff_2424, ncol=3)
-grid.arrange(p_medtime_1515, p_medtime_2415, p_medtime_2424, ncol=3)
+pdf("/home/butellyn/plot_validation/plots/distributions_CRdegoffspeed.pdf", width=12, height=12)
+grid.arrange(p_CR_1515, p_CR_2415, p_CR_2424, nrow=3)
+grid.arrange(p_degoff_1515, p_degoff_2415, p_degoff_2424, nrow=3)
+grid.arrange(p_medtime_1515, p_medtime_2415, p_medtime_2424, nrow=3)
 dev.off()
 
 
